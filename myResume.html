@@ -2,36 +2,73 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的履歷 - 111036066</title>林容安
-  <link rel="stylesheet" href="style.css">
+  <title>林容安的履歷</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-photo {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .contact {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-  <div class="resume-container">
-    <h1>我的履歷</h1>
-    <div class="basic-info">
-      <p><strong>學號：</strong>111036066</p>
-      <p><strong>姓名：</strong>林容安</p>
-      <p><strong>Email：</strong>example@mail.com</p>
+
+  <!-- 🌸 亞洲大學花景照片 -->
+  <img class="header-photo" src="https://udn.com/image/full/2023/05/23/4799493.jpeg" alt="亞洲大學花景照片">
+
+  <div class="content">
+    <h1>林容安</h1>
+    <p>應徵職位：暫代</p>
+
+    <div class="contact">
+      📧 信箱：<a href="mailto:k13141107@gmail.com">k13141107@gmail.com</a><br>
+      🎓 學號：111036066
     </div>
 
-    <div class="section">
-      <h2>自我介紹</h2>
-      <p>你好，我是林容安，一位熱愛學習前端技術的大學生，喜歡解決問題與挑戰自我。</p>
-    </div>
+    <h2>學歷</h2>
+    <p>亞洲大學 財經法律學系</p>
 
-    <div class="section">
-      <h2>技能</h2>
-      <button onclick="toggleSkills()">顯示/隱藏技能</button>
-      <ul id="skill-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </div>
+    <h2>技能</h2>
+    <ul>
+      <li>HTML / CSS / JavaScript</li>
+      <li>React / Vue</li>
+      <li>Git / GitHub</li>
+    </ul>
+
+    <h2>興趣</h2>
+    <p>追劇、逛街</p>
+
+    <h2>理想</h2>
+    <p>司法官</p>
+
+    <h2>夢想</h2>
+    <p>環遊世界</p>
   </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
+

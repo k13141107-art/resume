@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>林容安的履歷</title>
   <style>
-    /* Reset */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -44,24 +43,25 @@
     }
 
     aside img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
       object-fit: cover;
-      max-height: 280px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     aside h1 {
-      font-size: 2.8rem;
-      margin-bottom: 12px;
+      font-size: 2rem;
+      margin-bottom: 8px;
       font-weight: 900;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
       color: #ecf0f1;
     }
+
     aside p.position {
       font-size: 1.1rem;
-      margin-bottom: 36px;
+      margin-bottom: 30px;
       font-weight: 600;
       letter-spacing: 0.05em;
       color: #bdc3c7;
@@ -70,18 +70,15 @@
     .contact-item {
       display: flex;
       align-items: center;
-      margin-bottom: 22px;
-      font-size: 1.1rem;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
       font-weight: 500;
       color: #ecf0f1;
-      cursor: default;
-      transition: color 0.3s ease;
     }
 
     .contact-item span.icon {
-      font-size: 1.5rem;
-      margin-right: 12px;
-      user-select: none;
+      font-size: 1.4rem;
+      margin-right: 10px;
     }
 
     .contact-item a {
@@ -90,6 +87,7 @@
       border-bottom: 1px dotted transparent;
       transition: border-bottom-color 0.3s ease;
     }
+
     .contact-item a:hover {
       border-bottom-color: #ecf0f1;
     }
@@ -122,16 +120,19 @@
       color: #34495e;
       margin-bottom: 22px;
     }
+
     ul {
       padding-left: 28px;
       list-style: none;
     }
+
     ul li {
       position: relative;
       padding-left: 18px;
       margin-bottom: 12px;
       line-height: 1.4;
     }
+
     ul li::before {
       content: "▹";
       position: absolute;
@@ -142,46 +143,34 @@
       line-height: 1;
     }
 
-    /* 文字排版微調 */
-    p {
-      line-height: 1.55;
+    /* 學校圖片樣式 */
+    .school-photo {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      margin-bottom: 30px;
     }
 
-    /* emoji icon align */
-    .contact-item span.icon, .contact-item a, .contact-item span.text {
-      display: inline-flex;
-      align-items: center;
-    }
-
-    /* 小螢幕響應 */
     @media screen and (max-width: 768px) {
-      body {
-        padding: 20px 10px;
-      }
       main {
         flex-direction: column;
         max-width: 100%;
-        box-shadow: none;
         border-radius: 0;
+        box-shadow: none;
       }
       aside {
         width: 100%;
-        padding: 20px 30px 30px;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        padding: 20px 30px;
         text-align: left;
       }
       aside img {
-        max-width: 100px;
+        width: 80px;
+        height: 80px;
         margin-right: 20px;
-        margin-bottom: 0;
-      }
-      aside h1 {
-        font-size: 1.8rem;
-        margin-bottom: 6px;
-      }
-      aside p.position {
         margin-bottom: 0;
       }
       section.content {
@@ -193,15 +182,11 @@
 <body>
   <main>
     <aside>
-      <img
-        class="header-photo"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Asia_University_Taiwan_campus.jpg/1200px-Asia_University_Taiwan_campus.jpg"
-        alt="亞洲大學校園風景照片，履歷頁面封面圖"
-        loading="lazy"
-      />
+      <img src="b640ac59-da1b-4f57-ba54-53c15f1982fa.jpg" alt="林容安的個人照片" />
+
       <div>
         <h1>林容安</h1>
-        <p class="position">暫代</p>
+        <p class="position">法律系學生</p>
 
         <div class="contact-item">
           <span class="icon">📧</span>
@@ -209,7 +194,7 @@
         </div>
         <div class="contact-item">
           <span class="icon">🎓</span>
-          <span class="text">學號：111036066</span>
+          <span>學號：111036066</span>
         </div>
       </div>
     </aside>
@@ -218,14 +203,15 @@
       <section>
         <h2>學歷</h2>
         <p>亞洲大學 財經法律學系</p>
+        <img src="下載.jpg" alt="亞洲大學校園照片" class="school-photo" />
       </section>
 
       <section>
-        <h2>技能</h2>
+        <h2>專業能力</h2>
         <ul>
-          <li>HTML / CSS / JavaScript</li>
-          <li>React / Vue</li>
-          <li>Git / GitHub</li>
+          <li>法律檢索與法條分析</li>
+          <li>法律文件撰寫與判決研究</li>
+          <li>HTML / CSS / JavaScript 基礎</li>
         </ul>
       </section>
 
@@ -273,3 +259,4 @@
   </main>
 </body>
 </html>
+

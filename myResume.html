@@ -1,74 +1,111 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>林容安的履歷</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* 基本重置 */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    main {
+      max-width: 700px;
+      width: 100%;
+      border: 1px solid #000;
+      padding: 30px 40px;
+      box-shadow: none;
+    }
+
+    /* 封面照片 */
     .header-photo {
       width: 100%;
-      max-height: 300px;
+      max-height: 280px;
       object-fit: cover;
       display: block;
+      margin-bottom: 30px;
+      border: 1px solid #000;
     }
 
-    .content {
-      padding: 20px;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      font-weight: bold;
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
     }
 
-    h1, h2 {
-      color: #333;
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #000;
+      padding-bottom: 4px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 15px;
     }
 
     ul {
       padding-left: 20px;
+      margin-bottom: 15px;
+      list-style-type: disc;
     }
 
     .contact {
-      margin-top: 10px;
-      font-size: 16px;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px dotted #000;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #555;
+      border-bottom-style: solid;
     }
   </style>
 </head>
 <body>
+  <main>
+    <!-- 🌸 亞洲大學校園風景照片（Base64 內嵌） -->
+    <img
+      class="header-photo"
+      src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…（此處為完整 Base64 字串）…"
+      alt="亞洲大學校園風景照片，履歷頁面封面圖"
+      loading="lazy"
+    />
 
-  <!-- 🌸 亞洲大學花景照片 -->
-  <img class="header-photo" src="https://udn.com/image/full/2023/05/23/4799493.jpeg" alt="亞洲大學花景照片">
-
-  <div class="content">
     <h1>林容安</h1>
     <p>應徵職位：暫代</p>
 
-    <div class="contact">
-      📧 信箱：<a href="mailto:k13141107@gmail.com">k13141107@gmail.com</a><br>
-      🎓 學號：111036066
-    </div>
-
-    <h2>學歷</h2>
-    <p>亞洲大學 財經法律學系</p>
-
-    <h2>技能</h2>
-    <ul>
-      <li>HTML / CSS / JavaScript</li>
-      <li>React / Vue</li>
-      <li>Git / GitHub</li>
-    </ul>
-
-    <h2>興趣</h2>
-    <p>追劇、逛街</p>
-
-    <h2>理想</h2>
-    <p>司法官</p>
-
-    <h2>夢想</h2>
-    <p>環遊世界</p>
-  </div>
-
-</body>
-</html>
+    <div cl
 

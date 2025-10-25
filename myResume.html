@@ -5,173 +5,226 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>林容安的履歷</title>
   <style>
+    /* ===== 全域設定 ===== */
     *, *::before, *::after {
       box-sizing: border-box;
     }
     body {
       margin: 0;
-      background: #f4f7fa;
       font-family: "Noto Sans TC", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #2c3e50;
+      background-color: #f5f1eb;
+      color: #3a2e2a;
       line-height: 1.6;
+      padding: 50px 20px;
       display: flex;
       justify-content: center;
-      padding: 40px 20px;
-      min-height: 100vh;
     }
 
     main {
       display: flex;
-      max-width: 900px;
+      flex-direction: row;
+      max-width: 950px;
       width: 100%;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+      background-color: #fffaf5;
+      border-radius: 24px;
       overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      position: relative;
     }
 
-    /* 左側聯絡欄 */
-    aside {
-      background: #34495e;
-      color: #ecf0f1;
+    /* ===== 背景裝飾形狀 ===== */
+    main::before, main::after {
+      content: "";
+      position: absolute;
+      background-color: #d7bfa8;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    main::before {
+      width: 220px;
+      height: 220px;
+      top: -60px;
+      left: -80px;
+      opacity: 0.3;
+    }
+
+    main::after {
       width: 260px;
-      padding: 40px 30px;
+      height: 260px;
+      bottom: -80px;
+      right: -100px;
+      opacity: 0.25;
+    }
+
+    /* ===== 左側區 ===== */
+    aside {
+      width: 320px;
+      background-color: #f0e3d4;
+      padding: 50px 35px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
+      position: relative;
+      z-index: 1;
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
     }
 
     aside img {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 25px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
     aside h1 {
-      font-size: 2rem;
-      margin-bottom: 8px;
+      font-size: 1.8rem;
       font-weight: 900;
-      letter-spacing: 1px;
-      color: #ecf0f1;
+      margin: 0;
+      color: #3a2e2a;
     }
 
     aside p.position {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
+      font-size: 1rem;
       font-weight: 600;
-      letter-spacing: 0.05em;
-      color: #bdc3c7;
+      color: #7b5e4e;
+      margin-bottom: 25px;
+    }
+
+    /* 聯絡資訊 */
+    .contact-section {
+      width: 100%;
+      margin-bottom: 30px;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: #ecf0f1;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      color: #4b3c33;
     }
 
     .contact-item span.icon {
-      font-size: 1.4rem;
       margin-right: 10px;
+      font-size: 1.2rem;
     }
 
     .contact-item a {
-      color: #ecf0f1;
+      color: inherit;
       text-decoration: none;
       border-bottom: 1px dotted transparent;
-      transition: border-bottom-color 0.3s ease;
     }
 
     .contact-item a:hover {
-      border-bottom-color: #ecf0f1;
+      border-bottom-color: #4b3c33;
     }
 
-    /* 主體內容區 */
+    /* 技能條 */
+    .skills {
+      width: 100%;
+    }
+
+    .skills h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #3a2e2a;
+    }
+
+    .skill-item {
+      margin-bottom: 10px;
+    }
+
+    .skill-name {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .skill-bar {
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background-color: #e0cbb8;
+      overflow: hidden;
+    }
+
+    .skill-bar div {
+      height: 100%;
+      background-color: #b38867;
+      border-radius: 5px;
+    }
+
+    /* ===== 右側內容 ===== */
     section.content {
       flex: 1;
-      padding: 40px 50px;
+      padding: 50px 60px;
+      z-index: 1;
+      background-color: #fffaf5;
     }
 
-    h2 {
-      font-size: 1.9rem;
-      border-bottom: 3px solid #2980b9;
-      padding-bottom: 8px;
-      margin-bottom: 24px;
-      color: #2980b9;
-      font-weight: 700;
+    section.content h2 {
+      font-size: 1.5rem;
+      color: #7a5230;
+      border-bottom: 2px solid #d6b89c;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
     }
 
-    h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-top: 32px;
-      margin-bottom: 14px;
-      color: #34495e;
+    section.content h3 {
+      font-size: 1.2rem;
+      color: #523e31;
+      margin-top: 30px;
+      margin-bottom: 10px;
     }
 
-    p, ul {
-      font-size: 1.15rem;
-      color: #34495e;
-      margin-bottom: 22px;
-    }
-
-    ul {
-      padding-left: 28px;
+    section.content ul {
       list-style: none;
+      padding-left: 20px;
+      margin-bottom: 20px;
     }
 
-    ul li {
+    section.content ul li {
       position: relative;
-      padding-left: 18px;
-      margin-bottom: 12px;
-      line-height: 1.4;
+      padding-left: 16px;
+      margin-bottom: 8px;
     }
 
-    ul li::before {
-      content: "▹";
+    section.content ul li::before {
+      content: "•";
       position: absolute;
       left: 0;
-      color: #2980b9;
-      font-weight: 900;
-      font-size: 1.2rem;
+      color: #b38760;
+      font-size: 1.3rem;
       line-height: 1;
     }
 
-    /* 學校圖片樣式 */
+    p {
+      font-size: 1.05rem;
+      color: #4a3c34;
+    }
+
     .school-photo {
       width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 14px;
       margin-top: 10px;
       margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      object-fit: cover;
+      height: 180px;
     }
 
     @media screen and (max-width: 768px) {
       main {
         flex-direction: column;
-        max-width: 100%;
         border-radius: 0;
-        box-shadow: none;
       }
       aside {
         width: 100%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 20px 30px;
-        text-align: left;
-      }
-      aside img {
-        width: 80px;
-        height: 80px;
-        margin-right: 20px;
-        margin-bottom: 0;
+        flex-direction: column;
+        border-radius: 0;
       }
       section.content {
         padding: 30px 25px;
@@ -183,11 +236,10 @@
   <main>
     <aside>
       <img src="b640ac59-da1b-4f57-ba54-53c15f1982fa.jpg" alt="林容安的個人照片" />
+      <h1>林容安</h1>
+      <p class="position">法律系學生</p>
 
-      <div>
-        <h1>林容安</h1>
-        <p class="position">法律系學生</p>
-
+      <div class="contact-section">
         <div class="contact-item">
           <span class="icon">📧</span>
           <a href="mailto:k13141107@gmail.com">k13141107@gmail.com</a>
@@ -195,6 +247,22 @@
         <div class="contact-item">
           <span class="icon">🎓</span>
           <span>學號：111036066</span>
+        </div>
+      </div>
+
+      <div class="skills">
+        <h2>技能</h2>
+        <div class="skill-item">
+          <div class="skill-name">法律檢索</div>
+          <div class="skill-bar"><div style="width: 85%;"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">法條分析</div>
+          <div class="skill-bar"><div style="width: 80%;"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">HTML / CSS / JS</div>
+          <div class="skill-bar"><div style="width: 65%;"></div></div>
         </div>
       </div>
     </aside>
@@ -237,7 +305,7 @@
         <ul>
           <li>完成所有學分，強化法律寫作與研究能力</li>
           <li>準備國考（司法官、律師、公職人員等）</li>
-          <li>爭取法院、律師事務所、企業法務部門等實習機會，累積實務經驗</li>
+          <li>爭取法院、律師事務所、企業法務部門等實習機會</li>
         </ul>
 
         <h3>中程規劃（畢業後 2～5 年）</h3>
@@ -251,7 +319,7 @@
         <ul>
           <li>深化專業領域，成為法律專才</li>
           <li>成立個人律所或投入法律教育</li>
-          <li>貢獻社會，參與公益法律服務</li>
+          <li>參與公益法律服務，貢獻社會</li>
           <li>擴展國際視野，參與海外進修或國際論壇</li>
         </ul>
       </section>
@@ -259,4 +327,3 @@
   </main>
 </body>
 </html>
-
